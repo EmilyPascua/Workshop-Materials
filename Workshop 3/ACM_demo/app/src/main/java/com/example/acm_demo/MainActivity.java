@@ -1,9 +1,6 @@
 package com.example.acm_demo;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,10 +10,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.acm_demo.Fragment.AboutFragment;
+import com.example.acm_demo.fragment.Announcements;
+import com.example.acm_demo.fragment.Resources;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,14 +73,19 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.home) {
-            AboutFragment mainFragment = new AboutFragment();
+
+        } else if (id == R.id.announcements) {
+            Announcements mainFragment = new Announcements();
             android.support.v4.app.FragmentTransaction fragmentTransaction =
                     getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, mainFragment);
             fragmentTransaction.commit();
-        } else if (id == R.id.announcements) {
-
         } else if (id == R.id.resources) {
+            Resources resources = new Resources();
+            android.support.v4.app.FragmentTransaction fragmentTransaction =
+                    getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, resources);
+            fragmentTransaction.commit();
 
         } else if (id == R.id.about) {
 

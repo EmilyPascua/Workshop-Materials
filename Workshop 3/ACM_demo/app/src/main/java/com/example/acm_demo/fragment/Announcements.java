@@ -1,4 +1,4 @@
-package com.example.acm_demo.Fragment;
+package com.example.acm_demo.fragment;
 
 
 import android.os.Bundle;
@@ -12,18 +12,18 @@ import com.example.acm_demo.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AboutFragment extends Fragment {
+public class Announcements extends Fragment {
 
 
-    public AboutFragment() {
+    public Announcements() {
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        getActivity().setTitle("About Us");
-        return inflater.inflate(R.layout.fragment_about, container, false);
+        getActivity().setTitle("Announcements");
+        return inflater.inflate(R.layout.fragment_announcements, container, false);
     }
 
 }
