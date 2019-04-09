@@ -21,13 +21,13 @@ import java.util.List;
 
 public class RecyclerAnnouncements extends RecyclerView.Adapter<RecyclerAnnouncements.RecyclerViewHolder>{
 
-    //These are our variables, we have a list of Hackathons (supplied from the constructor)
+    //These are our variables, we have a list of announcements (supplied from the constructor)
     //And our context, since we're working in another class.
     private List<Announcement> announcements;
     private Context mContext;
 
     //This is our constructor.
-    //Here, we take in our data (the hackathons) and the context.
+    //Here, we take in our data (the announcements) and the context.
     public RecyclerAnnouncements(List<Announcement> announcements, Context context) {
         this.announcements = announcements;
         this.mContext = context;
