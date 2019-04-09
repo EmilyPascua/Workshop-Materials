@@ -33,15 +33,6 @@ public class RecyclerAnnouncements extends RecyclerView.Adapter<RecyclerAnnounce
         this.mContext = context;
     }
 
-    public void setAnnouncements(List<Announcement> announcements){
-        this.announcements = announcements;
-
-        //So that the announcements display in order
-        Collections.reverse(announcements);
-        notifyDataSetChanged();
-    }
-
-
     //Since we extend the Adapter, we must implement some methods.
     //The RecyclerViewHolder is one. This tells the adapter what item will we use
     //For our RecyclerView
