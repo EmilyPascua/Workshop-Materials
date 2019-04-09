@@ -80,13 +80,7 @@ public class Announcements extends Fragment {
                     //Adds this onto the list we have in this class.
                     mAnnouncements.add(announcement);
                 }
-
-                if (mAnnouncements.size() != 0 && mAnnouncements != null) {
-                    Log.d("anouncements:","not empty");
-                    mAnnouncementAdapter.setAnnouncements(mAnnouncements);
-                }else{
-                    Log.d("Announcements: ", "Announcements are empty");
-                }
+                mAnnouncementAdapter.notifyDataSetChanged();               
             }
 
             @Override
